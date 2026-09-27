@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cate.xmr | $CATE</title>
+  <meta name="description" content="cate.xmr on Solana sends its revenue toward Cake Wallet cofounder's X Money account—pure crypto chaos!" />
+  <meta name="theme-color" content="#100d16" />
+  <link rel="icon" href="logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: "#1b1830",
+            ink: "#100d16",
+            ember: "#ff6a00",
+            cream: "#fff4ea",
+          },
+          fontFamily: {
+            sans: ["Outfit", "sans-serif"],
+            display: ["Chakra Petch", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    :root { color-scheme: dark; }
+    body { font-family: Outfit, sans-serif; }
+    .font-display { font-family: "Chakra Petch", sans-serif; }
+    ::selection { background: #ff6a00; color: #1a120c; }
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: #100d16; }
+    ::-webkit-scrollbar-thumb { background: #ff6a00; border-radius: 999px; }
+    .neon {
+      color: #ff7a1a;
+      text-shadow: 0 0 14px rgba(255, 106, 0, 0.85), 0 0 36px rgba(255, 106, 0, 0.4), 0 2px 10px rgba(0, 0, 0, 0.65);
+    }
+    .buy-glow { animation: glow 2.6s ease-in-out infinite; }
+    @keyframes glow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255, 106, 0, 0.45), 0 10px 30px rgba(255, 106, 0, 0.28); }
+      50% { box-shadow: 0 0 0 10px rgba(255, 106, 0, 0), 0 12px 36px rgba(255, 106, 0, 0.42); }
+    }
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    .marquee { animation: ticker 28s linear infinite; }
+    .marquee:hover { animation-play-state: paused; }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: none; }
+    }
+    .rise { animation: rise 0.7s ease both; }
+    [data-copy].is-copied { background: #fff4ea; color: #1b1830; }
+    a:focus-visible, button:focus-visible { outline: 2px solid #ff6a00; outline-offset: 3px; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-ink font-sans text-cream antialiased">
+  <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-30 bg-ink bg-cover bg-top bg-no-repeat" style="background-image: url('banner.jpg');"></div>
+  <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-20 bg-ink/65"></div>
+  <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(16,13,22,0.15),rgba(16,13,22,0.78)_58%,rgba(16,13,22,0.94))]"></div>
+  <div aria-hidden="true" class="pointer-events-none fixed inset-y-0 left-0 z-40 w-1 bg-gradient-to-b from-transparent via-ember to-transparent"></div>
+
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-ink/75 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3">
+      <a href="#top" class="flex items-center gap-2.5">
+        <img src="logo.jpg" width="1408" height="1408" alt="" class="h-10 w-10 rounded-xl object-cover ring-2 ring-ember/80" />
+        <span class="text-lg font-extrabold tracking-tight">cate.xmr</span>
+      </a>
+      <nav class="hidden items-center gap-7 text-sm font-medium text-cream/80 md:flex" aria-label="Primary">
+        <a href="#legend" class="transition hover:text-ember">Chaos</a>
+        <a href="#how-to-buy" class="transition hover:text-ember">How to Buy</a>
+        <a href="#chart" class="transition hover:text-ember">Chart</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="https://t.me/catexmr" target="_blank" rel="noopener noreferrer" aria-label="cate.xmr on Telegram" class="transition hover:scale-105">
+          <img src="tg.png" width="975" height="997" alt="" class="h-10 w-10 rounded-full object-cover ring-1 ring-white/20" />
+        </a>
+        <a href="https://x.com/catexmr" target="_blank" rel="noopener noreferrer" aria-label="cate.xmr on X" class="transition hover:scale-105">
+          <img src="x.png" width="554" height="554" alt="" class="h-10 w-10 rounded-full object-cover ring-1 ring-white/30" />
+        </a>
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&amp;output=TBA" target="_blank" rel="noopener noreferrer" class="buy-glow hidden rounded-full bg-ember px-4 py-2 text-sm font-bold tracking-wide text-[#1a120c] transition hover:bg-[#ff8124] sm:inline-flex">Buy Now</a>
+      </div>
+    </div>
+    <nav class="flex justify-center gap-6 border-t border-white/5 px-4 py-2 text-[11px] font-semibold tracking-[0.22em] text-cream/70 md:hidden" aria-label="Mobile">
+      <a href="#legend" class="hover:text-ember">CHAOS</a>
+      <a href="#how-to-buy" class="hover:text-ember">HOW TO BUY</a>
+      <a href="#chart" class="hover:text-ember">CHART</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="relative px-4 pb-6 pt-8 md:pt-12">
+      <div class="mx-auto max-w-6xl">
+        <div class="rise relative">
+          <div class="absolute -inset-3 rounded-[2rem] bg-ember/25 blur-2xl"></div>
+          <div class="absolute -inset-px rounded-[1.7rem] bg-gradient-to-r from-ember via-white to-ember opacity-90"></div>
+          <img src="banner.jpg" width="2448" height="816" alt="cate.xmr official banner" class="relative w-full rounded-[1.6rem] object-cover" />
+          <p class="absolute left-4 top-4 rounded-full border border-ember/50 bg-navy/90 px-3 py-1 font-display text-[10px] font-semibold tracking-[0.28em] text-ember">OFFICIAL</p>
+        </div>
+
+        <div class="rise relative z-10 mx-auto -mt-11 flex max-w-3xl flex-col items-center text-center md:-mt-16">
+          <img src="logo.jpg" width="1408" height="1408" alt="cate.xmr logo" class="h-24 w-24 rounded-[1.4rem] border-4 border-ember bg-[#e8e8e8] object-cover shadow-[0_0_32px_rgba(255,106,0,0.55)] md:h-32 md:w-32" />
+          <p class="mt-5 font-display text-xs font-semibold tracking-[0.42em] text-ember">SOLANA · X MONEY</p>
+          <h1 class="neon mt-2 font-display text-5xl font-bold tracking-tight md:text-7xl">cate.xmr</h1>
+          <p class="mt-4 max-w-2xl text-lg leading-relaxed text-cream drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)] md:text-xl">
+            cate.xmr on Solana sends its revenue toward Cake Wallet cofounder's X Money account—pure crypto chaos!
+          </p>
+
+          <div id="ca" class="mt-8 w-full max-w-xl scroll-mt-28 rounded-2xl border border-ember/40 bg-navy/80 p-2 pl-4 text-left shadow-[0_0_30px_rgba(255,106,0,0.15)] backdrop-blur-md">
+            <div class="flex items-center gap-3">
+              <div class="min-w-0 flex-1">
+                <p class="font-display text-[10px] font-semibold tracking-[0.28em] text-ember">CONTRACT ADDRESS</p>
+                <p id="contract-address" class="truncate font-display text-base font-semibold tracking-wide text-cream md:text-lg">TBA</p>
+              </div>
+              <button type="button" data-copy class="shrink-0 rounded-xl bg-ember px-4 py-3 font-display text-sm font-bold tracking-wider text-[#1a120c] transition hover:bg-[#ff8124]">
+                <span data-label>Copy</span>
+              </button>
+            </div>
+          </div>
+          <p id="copy-status" class="sr-only" aria-live="polite"></p>
+          <p class="mt-2 text-xs text-cream/70">Copy the official CA before you swap.</p>
+
+          <div class="mt-6 flex w-full flex-col items-center justify-center gap-3 sm:flex-row">
+            <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&amp;output=TBA" target="_blank" rel="noopener noreferrer" class="buy-glow inline-flex min-w-[12.5rem] items-center justify-center gap-2 rounded-full bg-ember px-7 py-3.5 font-display text-sm font-bold tracking-[0.16em] text-[#1a120c] transition hover:-translate-y-0.5 hover:bg-[#ff8124]">
+              Buy Now
+              <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+            <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="inline-flex min-w-[12.5rem] items-center justify-center gap-2 rounded-full border-2 border-ember bg-ink/40 px-7 py-3.5 font-display text-sm font-bold tracking-[0.16em] text-cream backdrop-blur-sm transition hover:-translate-y-0.5 hover:bg-ember hover:text-[#1a120c]">
+              Chart
+              <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 19V5M4 19h16" /><path d="M8 15l4-5 3 3 5-7" /></svg>
+            </a>
+          </div>
+
+          <div class="mt-6 flex items-center gap-3">
+            <a href="https://t.me/catexmr" target="_blank" rel="noopener noreferrer" aria-label="Telegram" class="transition hover:scale-105">
+              <img src="tg.png" alt="" class="h-11 w-11 rounded-full object-cover ring-1 ring-white/20" />
+            </a>
+            <a href="https://x.com/catexmr" target="_blank" rel="noopener noreferrer" aria-label="X" class="transition hover:scale-105">
+              <img src="x.png" alt="" class="h-11 w-11 rounded-full object-cover ring-1 ring-white/30" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="mt-10 overflow-hidden border-y border-ember/30 bg-navy/75 backdrop-blur-md" aria-hidden="true">
+      <div class="marquee flex w-max">
+        <p class="flex shrink-0 items-center gap-8 px-4 py-3 font-display text-xs font-semibold tracking-[0.32em] text-ember">
+          <span>cate.xmr</span><span>$CATE</span><span>SOLANA</span><span>X MONEY</span><span>CAKE WALLET</span><span>PURE CHAOS</span><span>cate.xmr</span><span>$CATE</span><span>SOLANA</span><span>X MONEY</span><span>CAKE WALLET</span><span>PURE CHAOS</span>
+        </p>
+        <p class="flex shrink-0 items-center gap-8 px-4 py-3 font-display text-xs font-semibold tracking-[0.32em] text-ember">
+          <span>cate.xmr</span><span>$CATE</span><span>SOLANA</span><span>X MONEY</span><span>CAKE WALLET</span><span>PURE CHAOS</span><span>cate.xmr</span><span>$CATE</span><span>SOLANA</span><span>X MONEY</span><span>CAKE WALLET</span><span>PURE CHAOS</span>
+        </p>
+      </div>
+    </div>
+
+    <section id="legend" class="scroll-mt-28 px-4 py-20">
+      <div class="mx-auto max-w-6xl">
+        <div class="overflow-hidden rounded-[2rem] border border-white/10 shadow-[0_0_50px_rgba(255,106,0,0.16)]">
+          <div class="grid md:grid-cols-5">
+            <div class="relative bg-navy px-8 py-10 md:col-span-3 md:px-12 md:py-14">
+              <p class="font-display text-xs font-semibold tracking-[0.35em] text-ember">THE MOVE</p>
+              <h2 class="mt-4 max-w-xl text-3xl font-extrabold leading-tight md:text-4xl">Revenue on Solana. Destination: X Money.</h2>
+              <p class="mt-5 max-w-xl text-base leading-relaxed text-cream/75">
+                cate.xmr on Solana sends its revenue toward Cake Wallet cofounder's X Money account—pure crypto chaos! $CATE is the meme. The route is the joke. The chaos is the point.
+              </p>
+            </div>
+            <div class="flex flex-col justify-between bg-ember px-8 py-10 text-navy md:col-span-2 md:px-10 md:py-14">
+              <img src="logo.jpg" alt="" class="h-20 w-20 rounded-2xl object-cover ring-4 ring-white" />
+              <div class="mt-8">
+                <p class="font-display text-3xl font-bold leading-none">$CATE</p>
+                <p class="mt-3 text-sm font-semibold leading-relaxed text-navy/80">Solana meme. Revenue aimed at one X Money account. Chaos with a destination.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 grid gap-4 md:grid-cols-3">
+          <article class="rounded-3xl border border-white/10 bg-navy/75 p-6 backdrop-blur-md transition hover:-translate-y-1 hover:border-ember/50">
+            <div class="grid h-11 w-11 place-items-center rounded-2xl bg-ember/15 text-ember">
+              <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+            </div>
+            <h3 class="mt-4 text-xl font-bold">Solana</h3>
+            <p class="mt-2 text-sm leading-relaxed text-cream/70">$CATE trades on Solana. Buys, fees, and the whole revenue story start on-chain, fast and in the open.</p>
+          </article>
+          <article class="rounded-3xl border border-white/10 bg-navy/75 p-6 backdrop-blur-md transition hover:-translate-y-1 hover:border-ember/50">
+            <div class="grid h-11 w-11 place-items-center rounded-2xl bg-ember/15 text-ember">
+              <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+            </div>
+            <h3 class="mt-4 text-xl font-bold">X Money</h3>
+            <p class="mt-2 text-sm leading-relaxed text-cream/70">The revenue points one way: Cake Wallet cofounder's X Money account. A meme with a very specific inbox.</p>
+          </article>
+          <article class="rounded-3xl border border-white/10 bg-navy/75 p-6 backdrop-blur-md transition hover:-translate-y-1 hover:border-ember/50">
+            <div class="grid h-11 w-11 place-items-center rounded-2xl bg-ember/15 text-ember">
+              <svg viewBox="0 0 24 24" class="h-6 w-6" fill="currentColor" aria-hidden="true"><path d="M5 10.2 5 6.2l4.2 3.2L12 5.2l2.8 4.2L19 6.2v4c0 4.6-3 8.2-7 8.2s-7-3.6-7-8.2z"/><path d="M8.2 13.2h.01M15.8 13.2h.01" stroke="#1b1830" stroke-width="1.6" stroke-linecap="round"/><path d="M7.2 15.6c1.1.7 2.3.4 2.8-.2M14 15.4c.5.6 1.7.9 2.8.2" fill="none" stroke="#fff4ea" stroke-width="1" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="mt-4 text-xl font-bold">Pure Chaos</h3>
+            <p class="mt-2 text-sm leading-relaxed text-cream/70">No lore labyrinth. cate.xmr says the quiet part loud and calls it what it is — pure crypto chaos.</p>
+          </article>
+        </div>
+
+        <dl class="mt-6 grid grid-cols-2 gap-3 md:grid-cols-4">
+          <div class="rounded-2xl border border-white/10 bg-ink/50 px-4 py-4 backdrop-blur-md">
+            <dt class="font-display text-[10px] tracking-[0.22em] text-ember">NAME</dt>
+            <dd class="mt-1 font-semibold">cate.xmr</dd>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-ink/50 px-4 py-4 backdrop-blur-md">
+            <dt class="font-display text-[10px] tracking-[0.22em] text-ember">SYMBOL</dt>
+            <dd class="mt-1 font-semibold">$CATE</dd>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-ink/50 px-4 py-4 backdrop-blur-md">
+            <dt class="font-display text-[10px] tracking-[0.22em] text-ember">CHAIN</dt>
+            <dd class="mt-1 font-semibold">Solana</dd>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-ink/50 px-4 py-4 backdrop-blur-md">
+            <dt class="font-display text-[10px] tracking-[0.22em] text-ember">CA</dt>
+            <dd class="mt-1 truncate font-display font-semibold">TBA</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="how-to-buy" class="scroll-mt-28 px-4 py-8 pb-20">
+      <div class="mx-auto max-w-6xl">
+        <div class="max-w-2xl">
+          <p class="font-display text-xs font-semibold tracking-[0.35em] text-ember">SOLANA</p>
+          <h2 class="mt-2 text-4xl font-extrabold tracking-tight md:text-5xl">How to Buy</h2>
+          <p class="mt-3 text-cream/75">Four steps to swap SOL for $CATE and step into the chaos.</p>
+        </div>
+
+        <div class="relative mt-10">
+          <div class="pointer-events-none absolute left-[10%] right-[10%] top-7 hidden h-px bg-gradient-to-r from-transparent via-ember to-transparent xl:block"></div>
+          <ol class="relative z-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+            <li class="rounded-3xl border border-white/10 bg-navy/80 p-6 backdrop-blur-md">
+              <div class="relative grid h-14 w-14 place-items-center">
+                <span class="absolute -top-1 left-2 h-3 w-3 bg-ember [clip-path:polygon(50%_0,100%_100%,0_100%)]"></span>
+                <span class="absolute -top-1 right-2 h-3 w-3 bg-ember [clip-path:polygon(50%_0,100%_100%,0_100%)]"></span>
+                <span class="grid h-12 w-12 place-items-center rounded-full bg-ember font-display text-lg font-bold text-[#1a120c]">01</span>
+              </div>
+              <h3 class="mt-4 text-lg font-bold">Set up a Solana wallet</h3>
+              <p class="mt-2 text-sm leading-relaxed text-cream/70">Install <a class="text-ember underline decoration-ember/40 underline-offset-2 hover:decoration-ember" href="https://phantom.app" target="_blank" rel="noopener noreferrer">Phantom</a> or <a class="text-ember underline decoration-ember/40 underline-offset-2 hover:decoration-ember" href="https://solflare.com" target="_blank" rel="noopener noreferrer">Solflare</a>. Create a wallet and keep the recovery phrase somewhere only you can reach.</p>
+            </li>
+            <li class="rounded-3xl border border-white/10 bg-navy/80 p-6 backdrop-blur-md">
+              <div class="relative grid h-14 w-14 place-items-center">
+                <span class="absolute -top-1 left-2 h-3 w-3 bg-ember [clip-path:polygon(50%_0,100%_100%,0_100%)]"></span>
+                <span class="absolute -top-1 right-2 h-3 w-3 bg-ember [clip-path:polygon(50%_0,100%_100%,0_100%)]"></span>
+                <span class="grid h-12 w-12 place-items-center rounded-full bg-ember font-display text-lg font-bold text-[#1a120c]">02</span>
+              </div>
+              <h3 class="mt-4 text-lg font-bold">Fund it with SOL</h3>
+              <p class="mt-2 text-sm leading-relaxed text-cream/70">Buy SOL or transfer it into your wallet. Keep a little extra SOL so Solana network fees can clear.</p>
+            </li>
+            <li class="rounded-3xl border border-white/10 bg-navy/80 p-6 backdrop-blur-md">
+              <div class="relative grid h-14 w-14 place-items-center">
+                <span class="absolute -top-1 left-2 h-3 w-3 bg-ember [clip-path:polygon(50%_0,100%_100%,0_100%)]"></span>
+                <span class="absolute -top-1 right-2 h-3 w-3 bg-ember [clip-path:polygon(50%_0,100%_100%,0_100%)]"></span>
+                <span class="grid h-12 w-12 place-items-center rounded-full bg-ember font-display text-lg font-bold text-[#1a120c]">03</span>
+              </div>
+              <h3 class="mt-4 text-lg font-bold">Swap SOL for $CATE</h3>
+              <p class="mt-2 text-sm leading-relaxed text-cream/70">Hit Buy Now, connect your wallet, and swap SOL into $CATE. Match the contract address you copied so you trade the official token.</p>
+            </li>
+            <li class="rounded-3xl border border-white/10 bg-navy/80 p-6 backdrop-blur-md">
+              <div class="relative grid h-14 w-14 place-items-center">
+                <span class="absolute -top-1 left-2 h-3 w-3 bg-ember [clip-path:polygon(50%_0,100%_100%,0_100%)]"></span>
+                <span class="absolute -top-1 right-2 h-3 w-3 bg-ember [clip-path:polygon(50%_0,100%_100%,0_100%)]"></span>
+                <span class="grid h-12 w-12 place-items-center rounded-full bg-ember font-display text-lg font-bold text-[#1a120c]">04</span>
+              </div>
+              <h3 class="mt-4 text-lg font-bold">Confirm and watch</h3>
+              <p class="mt-2 text-sm leading-relaxed text-cream/70">Approve the transaction in your wallet. When it lands, $CATE is yours. Open the chart and watch the chaos move.</p>
+            </li>
+          </ol>
+        </div>
+
+        <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&amp;output=TBA" target="_blank" rel="noopener noreferrer" class="buy-glow inline-flex min-w-[12.5rem] items-center justify-center rounded-full bg-ember px-7 py-3.5 font-display text-sm font-bold tracking-[0.16em] text-[#1a120c] transition hover:-translate-y-0.5 hover:bg-[#ff8124]">Buy Now</a>
+          <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="inline-flex min-w-[12.5rem] items-center justify-center rounded-full border-2 border-ember px-7 py-3.5 font-display text-sm font-bold tracking-[0.16em] text-cream transition hover:-translate-y-0.5 hover:bg-ember hover:text-[#1a120c]">Chart</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="chart" class="scroll-mt-28 px-4 pb-24">
+      <div class="mx-auto max-w-6xl">
+        <div class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
+          <div>
+            <p class="font-display text-xs font-semibold tracking-[0.35em] text-ember">DEXSCREENER</p>
+            <h2 class="mt-2 text-4xl font-extrabold tracking-tight md:text-5xl">Chart</h2>
+            <p class="mt-3 max-w-xl text-cream/75">Watch $CATE live on Solana. Every candle is another lap of pure crypto chaos.</p>
+          </div>
+          <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border-2 border-ember px-6 py-3 font-display text-sm font-bold tracking-[0.16em] text-cream transition hover:bg-ember hover:text-[#1a120c]">Chart</a>
+        </div>
+
+        <div class="mt-6 flex flex-col gap-3 rounded-2xl border border-white/10 bg-navy/75 p-3 backdrop-blur-md sm:flex-row sm:items-center sm:justify-between sm:pl-5">
+          <p class="text-sm text-cream/80"><span class="font-display text-[10px] tracking-[0.22em] text-ember">CA</span> <span class="ml-2 font-display font-semibold text-cream">TBA</span></p>
+          <button type="button" data-copy class="rounded-xl bg-ember px-4 py-2.5 font-display text-sm font-bold tracking-wider text-[#1a120c] transition hover:bg-[#ff8124]">
+            <span data-label>Copy</span>
+          </button>
+        </div>
+
+        <div class="mt-5 overflow-hidden rounded-[1.6rem] border border-ember/40 bg-ink shadow-[0_0_48px_rgba(255,106,0,0.18)]">
+          <iframe
+            title="Dexscreener chart for cate.xmr"
+            src="https://dexscreener.com/solana/TBA?embed=1&amp;loadChartSettings=0&amp;trades=0&amp;tabs=0&amp;info=0&amp;chartLeftToolbar=0&amp;chartTheme=dark&amp;theme=dark&amp;chartStyle=0&amp;chartType=usd&amp;interval=15"
+            class="block h-[28rem] w-full md:h-[36rem]"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 bg-ink/80 px-4 py-12 backdrop-blur-md">
+    <div class="mx-auto flex max-w-6xl flex-col items-center gap-6 text-center">
+      <a href="#top" class="flex items-center gap-3">
+        <img src="logo.jpg" alt="" class="h-12 w-12 rounded-xl object-cover ring-2 ring-ember/80" />
+        <span class="text-2xl font-extrabold tracking-tight">cate.xmr</span>
+      </a>
+      <p class="max-w-lg text-sm text-cream/70">cate.xmr on Solana sends its revenue toward Cake Wallet cofounder's X Money account—pure crypto chaos!</p>
+      <div class="flex items-center gap-3">
+        <a href="https://t.me/catexmr" target="_blank" rel="noopener noreferrer" aria-label="cate.xmr on Telegram">
+          <img src="tg.png" alt="" class="h-11 w-11 rounded-full object-cover ring-1 ring-white/20 transition hover:scale-105" />
+        </a>
+        <a href="https://x.com/catexmr" target="_blank" rel="noopener noreferrer" aria-label="cate.xmr on X">
+          <img src="x.png" alt="" class="h-11 w-11 rounded-full object-cover ring-1 ring-white/30 transition hover:scale-105" />
+        </a>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&amp;output=TBA" target="_blank" rel="noopener noreferrer" class="rounded-full bg-ember px-5 py-2.5 font-display text-xs font-bold tracking-[0.16em] text-[#1a120c] hover:bg-[#ff8124]">Buy Now</a>
+        <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="rounded-full border border-ember px-5 py-2.5 font-display text-xs font-bold tracking-[0.16em] text-cream hover:bg-ember hover:text-[#1a120c]">Chart</a>
+      </div>
+      <p class="text-xs text-cream/45">$CATE is a meme coin on Solana. Markets move fast. Do your own research.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var source = document.getElementById("contract-address");
+      var status = document.getElementById("copy-status");
+      var ca = source ? source.textContent.trim() : "TBA";
+      var buttons = document.querySelectorAll("[data-copy]");
+
+      function mark(btn, ok) {
+        var label = btn.querySelector("[data-label]");
+        if (!label) return;
+        if (!label.dataset.original) label.dataset.original = label.textContent;
+        label.textContent = ok ? "Copied" : "Retry";
+        btn.classList.add("is-copied");
+        if (status) status.textContent = ok ? "Contract address copied." : "Could not copy the contract address.";
+        window.setTimeout(function () {
+          label.textContent = label.dataset.original;
+          btn.classList.remove("is-copied");
+          if (status) status.textContent = "";
+        }, 1600);
+      }
+
+      function copyWithCommand() {
+        var area = document.createElement("textarea");
+        area.value = ca;
+        area.setAttribute("readonly", "");
+        area.style.position = "fixed";
+        area.style.top = "0";
+        area.style.left = "0";
+        area.style.opacity = "0";
+        document.body.appendChild(area);
+        area.focus();
+        area.select();
+        area.setSelectionRange(0, ca.length);
+        var ok = false;
+        try {
+          ok = document.execCommand("copy");
+        } catch (err) {
+          ok = false;
+        }
+        area.remove();
+        return ok;
+      }
+
+      buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var ok = copyWithCommand();
+          if (ok) {
+            mark(btn, true);
+            return;
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(ca).then(function () {
+              mark(btn, true);
+            }).catch(function () {
+              mark(btn, false);
+            });
+            return;
+          }
+          mark(btn, false);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
